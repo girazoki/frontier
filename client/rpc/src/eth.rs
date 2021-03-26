@@ -1352,7 +1352,7 @@ impl<B: BlockT, BE, C, H: ExHashT> NetApiT for NetApi<B, BE, C, H> where
 		if let Ok(Some(data)) = self.client.storage(
 			&BlockId::Hash(hash),
 			&StorageKey(
-				storage_prefix_build(b"EVM", b"ChainId")
+				storage_prefix_build(b"EthereumChainId", b"ChainId")
 			)
 		) {
 			chain_id = Decode::decode(&mut &data.0[..]).unwrap_or_else(|_| None);
