@@ -1355,7 +1355,11 @@ impl<B: BlockT, BE, C, H: ExHashT> NetApiT for NetApi<B, BE, C, H> where
 				storage_prefix_build(b"EVM", b"ChainId")
 			)
 		) {
+			log::error!("Am I here");
+
 			chain_id = Decode::decode(&mut &data.0[..]).unwrap_or_else(|_| None);
+
+			log::error!("My chain Id at this point is {:?}", chain_id);
 		}
 
 		return if let Some(chain_id) = chain_id {
