@@ -13,7 +13,7 @@ sp-core = { version = "3.0.0", default-features = false, git = "https://github.c
 sp-io = { version = "3.0.0", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "rococo-v1" }
 fp-evm = { version = "0.8.0", default-features = false, path = "../../../../primitives/evm" }
 evm = { version = "0.26.0", default-features = false, features = ["with-codec"] }
-bn = { version = "0.4.4", default-features = false, git = "https://github.com/girazoki/bn.git", branch="update_rand"}
+bn = { version = "0.4.4", default-features = false, git = "https://github.com/iquerejeta/bn.git", branch="update-rand"}
 
 [features]
 default = ["std"]
